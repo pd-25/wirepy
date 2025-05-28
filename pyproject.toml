@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wirepy"
-version = "0.1.4"
+version = "0.1.6"
 description = "Laravel-style project structure for FastAPI"
 authors = [{ name = "Pradipta Bhuin", email = "bhuinjohn@gmail.com" }]
 license = "MIT"
