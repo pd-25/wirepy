@@ -5,8 +5,12 @@ from schemas.user_schema import ShowUser
 # from db.repository.user import create_new_user
 from typing import List, Optional
 
-router = APIRouter()
+user_router = APIRouter()
 
+
+@user_router.get("/")
+def get_users():
+    return {"message": "This is the user route"}
 # @router.get("/", response_model=List[ShowUser])
 # def get_blog(id: Optional[int] = None, db: Session = Depends(get_db)):
 #     if id:

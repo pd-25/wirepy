@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
-from database.config import databaseconfig
+from app.database.config import databaseconfig
 from typing import Generator
 
 # Create the SQLAlchemy engine
