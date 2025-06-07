@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, status, HTTPException
 from sqlalchemy.orm import Session
-from schemas.user_schema import ShowUser
+from app.schemas.user_schema import ShowUser
 # from db.session import get_db
 # from db.repository.user import create_new_user
 from typing import List, Optional

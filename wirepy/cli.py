@@ -46,11 +46,12 @@ def make_schema(name):
     make_file('schema', name)
 
 @cli.command()
-def migrate():
+@click.argument('name', required=False, default="auto")
+def make_migration(name):
     """Generate alembic migration"""
     run_migrate()
 
 @cli.command()
-def upgrade():
+def migrate():
     """Apply alembic migration"""
     run_upgrade()

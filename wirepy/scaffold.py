@@ -40,7 +40,7 @@ def make_file(file_type, name):
 
     template = {
         "controller": f"class {name.capitalize()}Controller:\n    pass\n",
-        "model": f"class {name.capitalize()}(Base):\n    __tablename__ = '{name.lower()}s'\n    id = Column(Integer, primary_key=True)\n",
+        "model": f"from app.database.base_class import Base\n from sqlalchemy import Column, Integer, String\n class {name.capitalize()}(Base):\n    __tablename__ = '{name.lower()}s'\n    id = Column(Integer, primary_key=True)\n",
         "service": f"class {name.capitalize()}Service:\n    pass\n",
         "route": f"from fastapi import APIRouter\n\nrouter = APIRouter()\n\n@router.get('/{name.lower()}s')\ndef get_all():\n    return []\n",
         "schema": f"from pydantic import BaseModel\n\nclass {name.capitalize()}Schema(BaseModel):\n    id: int"
