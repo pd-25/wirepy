@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wirepy"
-version = "0.1.9"
+version = "0.2.3"
 description = "Laravel-style project structure for FastAPI"
 authors = [{ name = "Pradipta Bhuin", email = "bhuinjohn@gmail.com" }]
 license = "MIT"
@@ -18,7 +18,8 @@ dependencies = [
     "pymysql",
     "python-dotenv",
     "alembic",
-    "click"
+    "click",
+    "pydantic[email]"
 ]
 
 [project.scripts]

@@ -49,7 +49,7 @@ def make_schema(name):
 @click.argument('name', required=False, default="auto")
 def make_migration(name):
     """Generate alembic migration"""
-    run_migrate()
+    run_migrate(name)
 
 @cli.command()
 def migrate():
