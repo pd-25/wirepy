@@ -9,8 +9,13 @@ import importlib.resources as pkg_resources
 def create_project(name):
     import wirepy  # required to access package resources
 
-    dst = Path.cwd() / name
-    dst.mkdir(parents=True, exist_ok=True)
+    if name:
+        dst = Path.cwd() / name
+        dst.mkdir(parents=True, exist_ok=True)
+        print(f"✔ Creating project in {dst}")
+    else:
+        dst = Path.cwd()
+        print(f"✔ Scaffolding project in current directory: {dst}")
 
     # Recursively copy the contents of the 'templates' folder inside wirepy package
     template_root = pkg_resources.files(wirepy).joinpath("templates")

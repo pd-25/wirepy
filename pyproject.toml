@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wirepy"
-version = "0.2.3"
-description = "Laravel-style project structure for FastAPI"
+version = "0.2.4"
+description = "WirePy is built on top of FastAPI with the core goal of maintaining large Python backends developed by multiple team members using a standardized project structure. It comes with built-in database connectivity and integrated Alembic migrations. Core components such as models, controllers, services, and schemas are already organized and ready to use. Instead of spending time setting up the project structure, you can simply install it via `pip` and start coding right away."
 authors = [{ name = "Pradipta Bhuin", email = "bhuinjohn@gmail.com" }]
 license = "MIT"
 readme = "README.md"

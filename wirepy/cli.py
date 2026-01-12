@@ -10,9 +10,13 @@ def cli():
     pass
 
 @cli.command()
-@click.argument('name')
+@click.argument('name', required=False, default=None)
 def new(name):
-    """Create a new wirepy project."""
+    """Create a new wirepy project.
+    
+    If name is provided, creates a new directory with that name.
+    If name is not provided, scaffolds in the current directory.
+    """
     create_project(name)
 
 @cli.command()
