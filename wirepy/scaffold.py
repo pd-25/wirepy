@@ -32,7 +32,10 @@ def create_project(name):
                         shutil.copyfileobj(fsrc, fdst)
 
     copy_all(template_root, dst)
-    print(f"✔ Project '{name}' created at {dst}")
+    if name:
+        print(f"✔ Project '{name}' created at {dst}")
+    else:
+        print(f"✔ Project created at {dst}")
     # Initialize alembic
     try:
         subprocess.run(
